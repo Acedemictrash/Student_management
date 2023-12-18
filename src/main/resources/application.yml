@@ -1,0 +1,31 @@
+server:
+  port: 9090
+
+# 数据库配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: Wu_CRH.0523
+    url: jdbc:mysql://118.89.101.101:3306/student?useUnicode=true&characterEncoding=utf-8
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+
+# 配置mybatis实体和xml映射
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+
+logging:
+  level:
+    com:
+      example:
+        mybatis=debug: debug
+
+pagehelper:
+  reasonable: false
+
+ip: localhost
